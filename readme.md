@@ -1,4 +1,16 @@
-1. Created structure of project
-2. Imported packages: ['nodemon','express.js']
-3. Imported from module fs function readFile
-4. In services i created function to getData from file.
+#1
+Please use "npm i" command to install all dependencies.
+
+#2
+Please put command "npm run start" to run the app
+
+#3
+Go to: http://localhost:3000/
+
+#simplify:
+<ul>
+<li>In adding orders, the number of order isn't unique and it can be duplicated</li>
+<li>App does not check structure of data in file.</li>
+<li>In real app should be created three collections - also with clients and products</li>
+<li>The "sales of product ranking" in http://localhost:3000/order/ was made in javascript to show my JS knowledge ;) but if we will operate huge quantity of orders the better way is db aggregation like in endpoint: http://localhost:3000/orders/ranking </li>
+</ul>
