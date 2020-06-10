@@ -7,6 +7,9 @@ Please put command "npm run start" to run the app
 #3
 Go to: http://localhost:3000/
 
+#4
+file with example of orders is attached to this repository - data.txt
+
 #simplify:
 <ul>
 <li>In adding orders, the number of order isn't unique and it can be duplicated</li>
