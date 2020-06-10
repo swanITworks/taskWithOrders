@@ -1,0 +1,19 @@
+
+<h1>Sales ranking</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Product name</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{# each ranking}}
+        <tr>
+            <td>{{ this._id }}</td>
+            <td style="text-align: center">{{ this.ordered }}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+<br>

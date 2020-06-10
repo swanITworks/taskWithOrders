@@ -1,0 +1,77 @@
+<h1>Orders</h1>
+<form action="/addOrders">
+    <input type="submit" value="Add new orders"/>
+</form>
+<br>
+<table>
+    <thead>
+    <tr>
+        <th>Order Id</th>
+        <th>Company name</th>
+        <th>Address</th>
+        <th>Item</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <form name="name">
+                <select name="companies" id="companies" onchange="this.form.submit()">
+                    <option value="">All</option>
+                    {{# each companies}}
+                        {{# check this}}
+                            {{selected}}
+                        {{/check}}
+                    {{/each}}
+                </select>
+            </form>
+        </td>
+        <td>
+            <form name="address">
+                <select name="address" id="address" onchange="this.form.submit()">
+                    <option value="">All</option>
+                    {{# each addresses}}
+                        {{# check this}}
+                            {{selected}}
+                        {{/check}}
+                    {{/each}}
+                </select>
+            </form>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    {{# each orders}}
+        <tr>
+            <td>{{ this.orderId }}</td>
+            <td>{{ this.companyName }}</td>
+            <td>{{ this.customerAddress }}</td>
+            <td>{{ this.orderedItem }}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+<br>
+<form name="fdelete" action="/orders/delete">
+    <label>Please put number of order to delete:</label>
+    <input type="text" name="toDelete" id="toDelete" name="fdelete">
+    <input type="submit" value="delete">
+</form>
+<br>
+<h1>Sales ranking</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Product name</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{# each ranking}}
+        <tr>
+            <td>{{ @key }}</td>
+            <td style="text-align: center">{{ this }}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+<br>

@@ -1,0 +1,11 @@
+<h1>Add file</h1>
+<p>We accept only txt files</p>
+<p>Example structure of two orders:</p>
+<p>001, SuperTrader, Steindamm 80, Macbook<br>
+    002, Cheapskates, Reeperbahn 153, Macbook</p>
+<form  action="/addOrders/uploads/" enctype="multipart/form-data" method="post">
+    <input id="data-file" type="file" accept="text/plain" name="data">
+    <input type="submit" value="send">
+</form>
+<br>
+<button onclick="window.history.back()">GO BACK</button>
