@@ -3,6 +3,8 @@ import AddOrders from '../services/addOrders'
 const addOrders = express.Router()
 const addOrd = new AddOrders();
 
+
+
 addOrders.post('/uploads', addOrd.upload, async (req, res, next) => {
     try {
         if (req.file && req.file.mimetype == 'text/plain') {
@@ -29,5 +31,7 @@ addOrders.use((err, req, res, next) => {
     console.error(err.stack)
     res.status(500).send(err.message)
 })
+
+
 
 export default addOrders;

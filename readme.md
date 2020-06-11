@@ -17,3 +17,7 @@ file with example of orders is attached to this repository - data.txt
 <li>In real app should be created three collections - also with clients and products</li>
 <li>The "sales of product ranking" in http://localhost:3000/order/ was made in javascript to show my JS knowledge ;) but if we will operate huge quantity of orders the better way is db aggregation like in endpoint: http://localhost:3000/orders/ranking </li>
 </ul>
+
+#
+To create this app I used methodology of MVC.
+
